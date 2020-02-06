@@ -8,13 +8,10 @@ import { PriceQueryFacade } from '@coding-challenge/stocks/data-access-price-que
   styleUrls: ['./stocks.component.css']
 })
 export class StocksComponent implements OnInit {
-  stockPickerForm: FormGroup;
-  symbol: string;
-  period: string;
+  public stockPickerForm: FormGroup;
+  public quotes$ = this.priceQuery.priceQueries$;
 
-  quotes$ = this.priceQuery.priceQueries$;
-
-  timePeriods = [
+  public timePeriods = [
     { viewValue: 'All available data', value: 'max' },
     { viewValue: 'Five years', value: '5y' },
     { viewValue: 'Two years', value: '2y' },

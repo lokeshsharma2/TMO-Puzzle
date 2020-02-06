@@ -9,11 +9,8 @@
     <mat-error
       ><span
         *ngIf="
-          !stockPickerForm.get('symbol').valid &&
-          stockPickerForm.get('symbol').touched
-        "
-        >Please enter a symbol</span
-      >
+          !stockPickerForm.get('symbol').valid
+        ">Please enter a symbol</span>
     </mat-error>
   </mat-form-field>
 
@@ -27,6 +24,12 @@
         {{ timePeriod.viewValue }}
       </mat-option>
     </mat-select>
+    <mat-error
+      ><span
+        *ngIf="
+          !stockPickerForm.get('period').valid
+        ">Please select a period</span>
+    </mat-error>
   </mat-form-field>
 
   <button (click)="fetchQuote()" mat-raised-button>Go</button>
