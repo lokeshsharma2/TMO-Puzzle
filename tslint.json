@@ -1,5 +1,4 @@
 {
-
   "rulesDirectory": [
     "node_modules/@nrwl/schematics/src/tslint",
     "node_modules/codelyzer"
